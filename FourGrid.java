@@ -85,64 +85,56 @@ public class FourGrid {
             for (int y = 0; y < matrixSize; y++)
             {
                 int i, sum;
-                matrix.set(x, y);
                 
                 if (x + 4 <= matrixSize) {
                     // Check to the right
+                    matrix.set(x, y);
                     sum = matrix.get();
-                    System.out.println("M1: " + matrix.get());
-                    for (i = x; i < 3; i++)
+                    for (i = 0; i < 3; i++)
                     {
                         matrix.move(1, 0);
-                        System.out.println("M1: " + matrix.get());
                         sum *= matrix.get();
                     }
                     if (sum > largestSum) {
                         largestSum = sum;
                     }
-                    matrix.set(x, y);
                 }
                 
                 if (y + 4 <= matrixSize) {
                     // Check down
+                    matrix.set(x, y);
                     sum = matrix.get();
-                    System.out.println("M2: " + matrix.get());
-                    for (i = x; i < 3; i++)
+                    for (i = 0; i < 3; i++)
                     {
                         matrix.move(0, 1);
-                        System.out.println("M2: " + matrix.get());
                         sum *= matrix.get();
                     }
                     if (sum > largestSum) {
                         largestSum = sum;
                     }
-                    matrix.set(x, y);
                 }
                 
                 if (x + 4 <= matrixSize && y + 4 < matrixSize) {
                     // Check downright
+                    matrix.set(x, y);
                     sum = matrix.get();
-                    System.out.println("M3: " + matrix.get());
-                    for (i = x; i < 3; i++)
+                    for (i = 0; i < 3; i++)
                     {
                         matrix.move(1, 1);
-                        System.out.println("M3: " + matrix.get());
                         sum *= matrix.get();
                     }
                     if (sum > largestSum) {
                         largestSum = sum;
                     }
-                    matrix.set(x, y);
                 }
                 
-                if (x >= 4 && y + 4 <= matrixSize) {
+                if (x >= 3 && y + 4 <= matrixSize) {
                     // Check downleft
+                    matrix.set(x, y);
                     sum = matrix.get();
-                    System.out.println("M4: " + matrix.get());
-                    for (i = x; i < 3; i++)
+                    for (i = 0; i < 3; i++)
                     {
                         matrix.move(-1, 1);
-                        System.out.println("M4: " + matrix.get());
                         sum *= matrix.get();
                     }
                     if (sum > largestSum) {
@@ -151,7 +143,7 @@ public class FourGrid {
                 }
             }
         }
-        System.out.println(largestSum);
+        System.out.println("Largest sum: " + largestSum);
     }
     
     public static void main(String[] args)
