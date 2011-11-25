@@ -2,6 +2,11 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Euler problem 10
+ *
+ * @author pjot
+ */
 public class PrimeSum {
 
 	private List<BigInteger> primes = new ArrayList<BigInteger>();
@@ -11,6 +16,9 @@ public class PrimeSum {
 	{
 		BigInteger thousand = BigInteger.valueOf(10000);
 		System.out.println("Calculating sum of primes below " + maxNumber);
+
+		primes.add(BigInteger.valueOf(2));
+
 		for (BigInteger i = BigInteger.valueOf(3); i.compareTo(maxNumber) < 0; i = i.add(BigInteger.valueOf(2)))
 		{
 			if (isPrime(i)) {
