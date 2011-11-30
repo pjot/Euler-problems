@@ -1,4 +1,3 @@
-
 public class LongString {
 	
 	private int maxLength = 1000000;
