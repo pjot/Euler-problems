@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class AbuntantNumbers {
+public class AbundantNumbers {
 
-	public AbuntantNumbers()
+	public AbundantNumbers()
 	{
 		ArrayList<Long> abundantNumbers = new ArrayList<Long>();
 		for (long i = 10; i < 28124; i++)
@@ -26,7 +26,7 @@ public class AbuntantNumbers {
 	
 	public static void main(String[] args)
 	{
-		new AbuntantNumbers();
+		new AbundantNumbers();
 	}
 
 	public HashSet<Long> getPairwiseSums(ArrayList<Long> numbers)
